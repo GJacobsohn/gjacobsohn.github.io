@@ -5,18 +5,20 @@ permalink: /about/
 ---
 ![Gabriel Jacobsohn](/assets/me2.jpg "Photo Gabriel Jacobsohn"){:.me}
 
-Hallo,
+ Hallo,
 
-Ich bin Gabriel Jacobsohn und arbeite als freiberuflicher Software Entwickler und Agile Coach.
+Ich bin Gabriel Jacobsohn und arbeite als freiberuflicher Softwareentwickler und Agile Coach.
 
-Mit meiner Erfahrung von 20 Jahren in verschiedenen Positionen in der Software Industrie,
-habe ich sehr viele verschiedene Perspektiven der betrachtung des Problemssoftware entwicklung kennengelernt.
+In den letzten 20 Jahren habe ich in verschiedenen Positionen an der Entstehung von Software mitgewirkt.
+Als Softwareentwickler, Projektleiter, Agile Coach und Business Analyst.
+Durch die verschiedenen Rollen habe ich das Problem Softwareentwicklung aus verschieden Perspektiven kennen und verstehen gelernt.
 
-Dieser Blog dient dazu, mein Wissenweiter zugeben. Er hilft aber auch mir mein Wissen und meine Erfahrung 
-niederzuschreiben und dabei darüber zu refelktieren.
+Dieser Blog dient dazu, mein Wissen weiterzugeben. 
+Es hilft aber auch mir mein Wissen und meine Erfahrung zu strukturieren um es nutzbar zu machen.
 
-Mein Blog behandelt die Themen Entwicklung, Prozesse und Kultur. 
-Denn Code ist immer ein Abbild der Organisation also der Prozesse und Kultur die in einer Organisation vorherschen.
+Also im Prinzip meine kleine eigene Selbsthilfegruppe ;-)
+
+Für Projektanfragen einfach eine Email schicken an cg.jacobsohn (AT) googlemail.com
 
 
 
@@ -33,7 +35,7 @@ Methoden
 
 Programmiersprachen
 ------
-- Java, Kotlin, Python
+- Java, Kotlin, Python, PHP, Ansi-C, Pro*C
 
 Frameworks
 ----------
@@ -41,7 +43,7 @@ Spring, Spring Boot, Django, Pylons
 
 Datendanken
 -----------
-Oracle DB, MySQL, Prostgre, MangoDB
+Oracle DB, MySQL, Postgre, MangoDB
 
 Tools
 -----
