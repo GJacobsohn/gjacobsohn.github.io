@@ -17,7 +17,7 @@ title: Gabriel Jacobsohn
 email: cg.jacobsohn@googlemail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Freiberuflicher Software Entwickler und Agile Coach
-baseurl: "gjacobsohn.github.com" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://gjacobsohn.github.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: g_jacobsohn
 github_username:  gjacobsohn
