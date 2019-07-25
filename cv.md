@@ -4,19 +4,17 @@ title: CV
 permalink: /cv/
 ---
 
-Eine Übersicht meiner bisherigen Tätigkeiten:
-
 Persönliche Daten:
 ==================
-Name: Clemens Gabriel Jacobsohn<br />
-Geburtsjahr: 1981<br />
-Ausbildung:    2011    B.Sc. Wirtschaftsinformatik, FH Wedel<br />
-               2004    Informatik Assistent, PTL Wedel<br />
 
-Zertifizierung:    2015    Certified ScrumMaster, Scrum Alliance<br />
-                   2012    ITIL Version 3 Foundation, TÜV SÜD Akademie<br />
-<br />
-<br />
+|----------------|-------------------------------------------------------|
+| Name           | Clemens Gabriel Jacobsohn                             |
+| Geburtsjahr    | 1981                                                  |
+| Ausbildung     | 2011    B.Sc. Wirtschaftsinformatik, FH Wedel         |
+|                |   2004    Informatik Assistent, PTL Wedel             |
+| Zertifizierung |    2015    Certified ScrumMaster, Scrum Alliance      |
+|                |   2012    ITIL Version 3 Foundation, TÜV SÜD Akademie |
+
 
 Projekterfahrung (Auszug):
 ==========================
