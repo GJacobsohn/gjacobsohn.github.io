@@ -5,7 +5,7 @@ permalink: /about/
 ---
 ![Gabriel Jacobsohn](/assets/me2.jpg "Photo Gabriel Jacobsohn"){:.me}
 
- Hallo,
+Hallo,
 
 Ich bin Gabriel Jacobsohn und arbeite als freiberuflicher Softwareentwickler und Agile Coach.
 
