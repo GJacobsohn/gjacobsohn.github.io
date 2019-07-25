@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Spring Boot mit Kotlin Teil 1 | Your awesome title</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Spring Boot mit Kotlin Teil 1" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Dies ist der Start einer Blogserie, die sich mit den Unterschieden zwischen Java und Kotlin bei der Entwicklung eines Spring Projektes auseinandersetzt. Ich werde aus der Perspektive eines Java Entwicklers aufzeigen, welche unterschiede bestehen. Der Quellcode des Beispiel Projekts wird auf Github erscheinen jeder Teil der Blogserie wird in einem Branch des Beispielprojektes hinterlegt sein." />
+<meta property="og:description" content="Dies ist der Start einer Blogserie, die sich mit den Unterschieden zwischen Java und Kotlin bei der Entwicklung eines Spring Projektes auseinandersetzt. Ich werde aus der Perspektive eines Java Entwicklers aufzeigen, welche unterschiede bestehen. Der Quellcode des Beispiel Projekts wird auf Github erscheinen jeder Teil der Blogserie wird in einem Branch des Beispielprojektes hinterlegt sein." />
+<link rel="canonical" href="/development/spring/kotlin/2019/07/22/spring-boot-and-kotlin.html" />
+<meta property="og:url" content="/development/spring/kotlin/2019/07/22/spring-boot-and-kotlin.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-07-22T13:48:04+02:00" />
+<script type="application/ld+json">
+{"description":"Dies ist der Start einer Blogserie, die sich mit den Unterschieden zwischen Java und Kotlin bei der Entwicklung eines Spring Projektes auseinandersetzt. Ich werde aus der Perspektive eines Java Entwicklers aufzeigen, welche unterschiede bestehen. Der Quellcode des Beispiel Projekts wird auf Github erscheinen jeder Teil der Blogserie wird in einem Branch des Beispielprojektes hinterlegt sein.","@type":"BlogPosting","url":"/development/spring/kotlin/2019/07/22/spring-boot-and-kotlin.html","headline":"Spring Boot mit Kotlin Teil 1","dateModified":"2019-07-22T13:48:04+02:00","datePublished":"2019-07-22T13:48:04+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"/development/spring/kotlin/2019/07/22/spring-boot-and-kotlin.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Your awesome title" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">Über mich</a><a class="page-link" href="/cv/">CV</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Spring Boot mit Kotlin Teil 1</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-07-22T13:48:04+02:00" itemprop="datePublished">Jul 22, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><strong>Dies ist der Start einer Blogserie, die sich mit den Unterschieden zwischen Java und Kotlin bei der Entwicklung 
+eines Spring Projektes auseinandersetzt. Ich werde aus der Perspektive eines Java Entwicklers aufzeigen, welche 
+unterschiede bestehen. Der Quellcode des Beispiel Projekts wird auf Github erscheinen jeder Teil der Blogserie wird 
+in einem Branch des Beispielprojektes hinterlegt sein.</strong></p>
+
+<p>Jetzt viel Spass beim lesen.</p>
+
+<h1 id="die-dateistruktur">Die Dateistruktur</h1>
+<p>Ich habe auf <a href="https://start.spring.io/">start.spring.io</a> zwei Konfigurationen ausgewählt einmal mit Java 8 und einmal mit Kotlin.
+Dependencies habe ich für den Start leer gelassen, um uns auf das Wesentliche zu konzentrieren.</p>
+
+<p>Die Dateistruktur zeigt, dass die Projekte sehr ähnlich aufgebaut sind.</p>
+
+<p><img src="/assets/posts/javakotlin.jpg" alt="KotlinJavaFileStructure" title="Screenshot der Dateistruktur von Java und Kotlin" /></p>
+
+<p>Es gibt drei kleine Unterschiede:</p>
+<ol>
+  <li>Sourcecodedateien von Java liegen im Unterverzeichnis “Java” und Kotlin im Unterverzeichnis “Kotlin”</li>
+  <li>Die Kotlin Version hat noch ein weiteres Verzeichniss Java um auch Java Dateien ins Projekt einzubinden. 
+Dies gelingt, da Kotlin <a href="https://kotlinlang.org/docs/reference/java-interop.html">100% interoperable</a> zu Java ist.</li>
+  <li>Die Dateiendungen sind natürlich angepasst. *.java für Java und *.kt für Kotlin Quelldateien.</li>
+</ol>
+
+<h1 id="die-hauptdatei-ohlalaapplicationjavakt">Die Hauptdatei OhlalaApplication.java/.kt</h1>
+
+<p>Sehen wir uns jetzt die beiden Hauptdateien, der Java und Kotlin nutzung von SpringBoot an.</p>
+
+<p>OhlalaApplication.java:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">gjacobsohn</span><span class="o">.</span><span class="na">ohlala</span><span class="o">.</span><span class="na">ohlala</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.springframework.boot.SpringApplication</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span><span class="o">;</span>
+
+<span class="nd">@SpringBootApplication</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OhlalaApplication</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+     <span class="nc">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="nc">OhlalaApplication</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+  <span class="o">}</span></code></pre></figure>
+
+<p>OhlalaApplication.kt:</p>
+
+<figure class="highlight"><pre><code class="language-kotlin" data-lang="kotlin"><span class="k">package</span> <span class="nn">com.gjacobsohn.ohlala.ohlala</span>
+
+<span class="k">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span>
+<span class="k">import</span> <span class="nn">org.springframework.boot.runApplication</span>
+
+<span class="nd">@SpringBootApplication</span>
+<span class="kd">class</span> <span class="nc">OhlalaApplication</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="nv">args</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+  <span class="n">runApplication</span><span class="p">&lt;</span><span class="n">OhlalaApplication</span><span class="p">&gt;(*</span><span class="n">args</span><span class="p">)</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Bis zur Definition der Klasse sind die Dateien ziemlich ähnlich. 
+Dann kommen ein paar auf den ersten Blick kleine 
+aber sehr wichtige Unterschiede.</p>
+
+<h1 id="die-deklaration-der-methode-main">Die Deklaration der Methode “main”</h1>
+<p>Java</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">OhlalaApplication</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Kotlin</p>
+
+<figure class="highlight"><pre><code class="language-kotlin" data-lang="kotlin"><span class="kd">class</span> <span class="nc">OhlalaApplication</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="nv">args</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;)</span> </code></pre></figure>
+
+<h2 id="unterschied-1-die-klassen-definiton">Unterschied 1: Die Klassen definiton</h2>
+
+<p>Ein kleiner aber sehr wichtiger Unterschied ist, dass bei der Kotlin Variante die geschweifte Klammern fehlen.
+In Kotlin können diese weg gelassen werden, wenn <a href="https://kotlinlang.org/docs/reference/classes.html">die Klasse ohne Body definert wird</a>. 
+Während in Java die Klasse eine Methode besitzt.</p>
+
+<h2 id="unterschied-2-definiton-der-funktion-main">Unterschied 2: Definiton der Funktion main</h2>
+<p>Aus dem ersten Unterschied folgt, das die Funktion <code class="highlighter-rouge">main</code> bei der Java Variante innerhalb der Klasse OhlalaApplication definiert ist,
+während bei Kotlin die <a href="https://kotlinlang.org/docs/reference/visibility-modifiers.html#packages">Definition auf Paketebene</a> erfolgt.
+Diese Art der Funktionen werden als top-level Functions bezeichnet.</p>
+
+<p>Daraus resultieren ein paar weitere Unterschiede:</p>
+
+<h3 id="sichtbarkeit">Sichtbarkeit</h3>
+<p>In <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html">Java ist die standard Sichtbarkeit von Methoden</a>  <code class="highlighter-rouge">package-private</code>. 
+Zugriffe sind nur innerhalb des Packages erlaubt aber nicht von aussen, um dies zu ändern muss das Keyword <code class="highlighter-rouge">public</code> genutzt werden.</p>
+
+<p>In Kotlin ist die Standard-Sichtbarkeit bei top-level Functions <code class="highlighter-rouge">public</code>, deshalb kann auf das Schlüsselwort verzichtet werden.</p>
+
+<h3 id="static">Static</h3>
+<p>In Java wurde das Keyword <code class="highlighter-rouge">static</code> genutzt um die <code class="highlighter-rouge">main</code> Funktion aufrufbar zumachen.</p>
+
+<p>Wie wir schon oben gesehen haben, ist die Methode <code class="highlighter-rouge">main</code> in Kotlin ausserhalb einer Klasse definiert.
+Da Top-Level Funktionen nicht innerhalb eines zu instanzierenden Objektes bestehen sind die Methode immer statisch.</p>
+
+<h3 id="rückgabewert">Rückgabewert</h3>
+<p>Java folgt einem in den 90er Jahre oft anzutreffenden Paradigma, dass alles explizit angeben wird auch unwichtige Informationen. 
+Das führte zu einer sehr ausladenene Syntaxs, ein ehemaliger Professor von mir nannte sie deshalb “Barock”.</p>
+
+<p>Kotlin folgt einem neuen Ansatz der besagt, nur wichtige Informationen sollten angeben werden um den Fokus auf wichtige Informatioen zu leiten.</p>
+
+<p>Java: Explizite angabe das keine Rückgabe erfolgt über <code class="highlighter-rouge">void</code>.<br />
+Kotlin: Implizit, da kein Rückgabewert angeben wurde wird auch keiner zurückgeben.</p>
+
+<h1 id="die-main-methode">Die main Methode</h1>
+
+<p>Java</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="nc">OhlalaApplication</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span></code></pre></figure>
+
+<p>In Java wird eine statische Methode ausgeführt deren Parameter die Klasse OhlalaApplication ist und 
+die Aufrufparameter des Programms.</p>
+
+<p>Was hier passiert ist, Java nimmt die Klasse und erzeugt ein Objekt der Klasse OhlalaApplication innerhalb 
+der statischen Methode <code class="highlighter-rouge">run</code>.</p>
+
+<p>Kotlin</p>
+
+<figure class="highlight"><pre><code class="language-kotlin" data-lang="kotlin"><span class="n">runApplication</span><span class="p">&lt;</span><span class="n">OhlalaApplication</span><span class="p">&gt;(*</span><span class="n">args</span><span class="p">)</span></code></pre></figure>
+
+<p>In Kotlin wird die Top-Level Funktion runApplication mit der Klasse OhlalaApplication als generischem Parameter ausgeführt. 
+Um zu verstehen was dort passiert müssen wir uns die Definition der Methode runApplication ansehen.</p>
+
+<figure class="highlight"><pre><code class="language-kotlin" data-lang="kotlin"><span class="k">public</span> <span class="k">inline</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">reified</span> <span class="nc">T</span> <span class="err">:</span> <span class="nc">kotlin</span><span class="err">.</span><span class="nc">Any</span><span class="p">&gt;</span> <span class="nf">runApplication</span><span class="p">(</span><span class="k">vararg</span> <span class="nv">args</span><span class="p">:</span> <span class="nc">kotlin</span><span class="p">.</span><span class="n">String</span><span class="p">):</span> <span class="nc">org</span><span class="p">.</span><span class="n">springframework</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">ConfigurableApplicationContext</span></code></pre></figure>
+
+<p>Die Methode runApplication ist definiert als <a href="https://kotlinlang.org/docs/reference/inline-functions.html"><code class="highlighter-rouge">inline</code></a> mit einem <a href="https://kotlinlang.org/docs/reference/inline-functions.html#reified-type-parameters"><code class="highlighter-rouge">reified Generic T</code></a> der von Typ <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html#kotlin.Any">Any</a> sein darf. 
+<code class="highlighter-rouge">Any</code> ist in Kotlin das Eqivalent zu <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html"><code class="highlighter-rouge">Object</code> in Java</a>.
+Diese Inline-Methode ist ein Adapter für die SpringBoot.runApplicaton methode um Java spezifische Aufrufe zu kapseln.</p>
+
+<h2 id="inline-functions">Inline-Functions</h2>
+<p>Inline Methoden sind lambda Ausdrücke die direkt in den Code kopiert werden. 
+Das bedeutet im Kompilat wird der Code direkt rein kopiert und nicht per Funktionsaufruf ausgeführt. 
+Das hat den Nachteil, das es im resultierenden Bytecode doppelungen gibt und er im zweifelsfall größer wird. 
+Aber auch den Vorteil, das der durch funktionsaufrufe Rechenzeit und Speicherverbrauch vermieden wird. 
+Wann es Vorteilhaft ist eine Inline Methode zu nutzen und wann nicht hängt vom Einzelfall ab.
+Ähnliches finden wir auch bei den Macros des C-Compliers.</p>
+
+<h2 id="reified">reified</h2>
+<p>Mit dem Schlüsselwort <code class="highlighter-rouge">refined</code> können wir ein generischen Typen als Parameter in der Funktion nutzen.
+Die ist nützlich, wenn wir den Typen nicht nur einsetzen wollen, sondern auch nutzen z.B. für Reflextions.</p>
+
+<h2 id="implementierung-der-runapplication-methode">Implementierung der runApplication Methode</h2>
+<p>Wenn wir uns nun die Implementierung der Inline-Funktion ansehen, 
+sehen wir auch warum ein weiterer Funktionsaufruf nur übermäßiger Overhead wäre.</p>
+
+<figure class="highlight"><pre><code class="language-kotlin" data-lang="kotlin"><span class="k">inline</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">reified</span> <span class="nc">T</span> <span class="err">:</span> <span class="nc">Any</span><span class="p">&gt;</span> <span class="nf">runApplication</span><span class="p">(</span><span class="k">vararg</span> <span class="nv">args</span><span class="p">:</span> <span class="nc">String</span><span class="p">):</span> <span class="nc">ConfigurableApplicationContext</span> <span class="p">=</span>
+        <span class="n">SpringApplication</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">T</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">,</span> <span class="p">*</span><span class="n">args</span><span class="p">)</span></code></pre></figure>
+
+<p><a href="https://github.com/spring-projects/spring-boot/blob/master/spring-boot-project/spring-boot/src/main/kotlin/org/springframework/boot/SpringApplicationExtensions.kt">SpringApplicationExtensions.kt</a></p>
+
+<p>Der SpringApplication.run Aufruf wird nur kapselt um eine nahtlose integration von Kotlin zuerreichen.</p>
+
+<p>Eine zweite Implementierung der Inline-Function zeigt uns einen init Parameter.</p>
+
+<figure class="highlight"><pre><code class="language-kotlin" data-lang="kotlin"><span class="k">inline</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">reified</span> <span class="nc">T</span> <span class="err">:</span> <span class="nc">Any</span><span class="p">&gt;</span> <span class="nf">runApplication</span><span class="p">(</span><span class="k">vararg</span> <span class="nv">args</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span> <span class="nv">init</span><span class="p">:</span> <span class="nc">SpringApplication</span><span class="p">.()</span> <span class="p">-&gt;</span> <span class="n">Unit</span><span class="p">):</span> <span class="nc">ConfigurableApplicationContext</span> <span class="p">=</span>
+		<span class="n">SpringApplication</span><span class="p">(</span><span class="n">T</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">).</span><span class="n">apply</span><span class="p">(</span><span class="n">init</span><span class="p">).</span><span class="n">run</span><span class="p">(*</span><span class="n">args</span><span class="p">)</span></code></pre></figure>
+
+<p><a href="https://github.com/spring-projects/spring-boot/blob/master/spring-boot-project/spring-boot/src/main/kotlin/org/springframework/boot/SpringApplicationExtensions.kt">SpringApplicationExtensions.kt</a></p>
+
+<p>Dieser Paramter ist ein Funktionsparameter. Die Funktion ist definiert als 
+Funktion auf dem <code class="highlighter-rouge">SpringApplication</code> Klasse als RÜckgabewert wird <a href="https://kotlinlang.org/docs/reference/coding-conventions.html#unit"><code class="highlighter-rouge">Unit</code></a> zurückgeben was in Kotlin nichts bedeutet. 
+Mit diesem Parameter können wir Werte im SpringApplication Objekt programmatisch setzen bevor der Spring Context erstellt wird.</p>
+
+<p>Beispiel:</p>
+
+<figure class="highlight"><pre><code class="language-kotlin" data-lang="kotlin"><span class="n">runApplication</span><span class="p">&lt;</span><span class="n">OhlalaApplication</span><span class="p">&gt;(*</span><span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">abc</span> <span class="p">===</span> <span class="s">"something"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">setHeadless</span><span class="p">(</span><span class="n">False</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Im nächsten abschnitt werden wir uns um die ersten Enties und Repositories kümmern.</p>
+
+  </div><a class="u-url" href="/development/spring/kotlin/2019/07/22/spring-boot-and-kotlin.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Your awesome title</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
