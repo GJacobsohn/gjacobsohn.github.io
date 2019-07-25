@@ -21,13 +21,26 @@ Zertifizierung:    2015    Certified ScrumMaster, Scrum Alliance<br />
 Projekterfahrung (Auszug):
 ==========================
 
-August 2019 Facelift
---------------------
-**Aufgabe:** Agile Coach vorallem Moderation<br>
-<br>
-**Sept. 2015 - Juli 2019** moovel Group GmbH (reachNow)<br>
-<br>
 
+Juli 2019 - Freiberufliche Tätigkeit als Entwickler und Agile Coach.
+===================================================================
+
+
+Juli 2019 - Facelift Gmbh
+--------------------
+**Rolle:** Agile Coach <br />
+**Aufage:** Moderation<br /> 
+Moderation <br />
+
+Juli 2019 -  INFINIT GmbH
+---------------------
+**Rolle:** Entwickler <br />
+**Projekt:** Erstellung eines MVP zur Teilnehmersteuerung und Engagement<br />
+
+Software zur Markterprobung von Fitnessgruppensteuerung, besonderer Fokus besthet auf Engagement besteht 
+von Teilnehmer.<br />
+
+**IT-Umgebung:** Spring Boot, AWS, Postgre, Hibernate, Docker, Kotlin, PWA, AWS<br />
 
 
 ---
@@ -73,6 +86,16 @@ März 2009 – Sep. 2011 Akra GmbH
 Die Akra GmbH ist ein IT-Dienstleister der professionelle und individuelle IT-Lösungen – von der Analyse, über die Konzeption und die Umsetzung bis hin zur Implementierung - anbietet.<br />
 In meiner Zeit bei der Akra GmbH habe ich als Entwickler, Projektleiter und Business Analyst gearbeit.<br />
 
+
+### Okt. 2015 - Sep. 2015
+**Branche:** Touristik 
+**Rolle:** Business Analyst / Systemarchitekt
+**Projekt:** Angebotserstellung für eine staatliche Ausschreibung
+* Analyse der im Pflichtenheft festgehaltenen Spezifikationen
+* Erstellung eines groben Umsetzungskonzeptes.
+* Berechnung der Kosten.
+
+  
 ### Okt. 2011 – Sep. 2015 
 **Branche:** Marktforschung, Medien / Mitarbeiteranzahl: 40.000+, Hamburg<br />
 **Rolle:** Projektleiter / Senior-Softwareentwickler<br />
