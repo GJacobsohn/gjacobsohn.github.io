@@ -4,12 +4,13 @@
 
 layout: home
 ---
-# Von Code und Kultur
 
-Dies ist ein Blog über Code und Kultur. In diesem Blog möchte ich nur auf die Technische Umsetzung von Software eingehen,
-sondern auch auf den Kontext in dem Software entwickelt wird. Dies hat einen Fundamentalen ein fluß auf das erstellte Produkt.
+Dies ist ein Blog über Code und Kultur. 
+In diesem Blog möchte ich nicht nur auf die technische Umsetzung von Software eingehen,
+sondern auch auf den Kontext in dem Software entwickelt wird. 
 
-Im Code spiegelt sich sehr schnell die Kultur einer Organisation wieder in  der sie entstanden ist.
+Im Code spiegelt sich sehr schnell die Kultur der Organisation wieder in der sie entstanden ist.
+Zum Beispiel: 
 
 >“Culture eats strategy for breakfast” (Peter Drucker)
 
