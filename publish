@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ $# -gt 0 ]
+   then
+      echo "commit message needed"
+      exit 1
+fi
+jekyll build -d ../gjacobsohn.github.io/
+pushd ../gjacobsohn.github.io/
+git fetch
+git add .
+git commit -m $1
+git merge
+git push
+popd
