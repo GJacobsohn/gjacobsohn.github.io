@@ -1,4 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-07-26T13:12:42+02:00</updated><id>/feed.xml</id><title type="html">Gabriel Jacobsohn</title><subtitle>Ein Blog über Programmierung, Prozesse, Menschen und Management. Den zwischen den 4 Faktoren gibt es eine wechselseitige Wirkung.</subtitle><entry><title type="html">Spring Boot mit Kotlin Teil 1</title><link href="/development/spring/kotlin/2019/07/22/spring-boot-and-kotlin.html" rel="alternate" type="text/html" title="Spring Boot mit Kotlin Teil 1" /><published>2019-07-22T13:48:04+02:00</published><updated>2019-07-22T13:48:04+02:00</updated><id>/development/spring/kotlin/2019/07/22/spring-boot-and-kotlin</id><content type="html" xml:base="/development/spring/kotlin/2019/07/22/spring-boot-and-kotlin.html">&lt;p&gt;&lt;strong&gt;Dies ist der Start einer Blogserie, die sich mit den Unterschieden zwischen Java und Kotlin bei der Entwicklung 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-01T12:00:15+02:00</updated><id>/feed.xml</id><title type="html">Gabriel Jacobsohn</title><subtitle>Ein Blog über Programmierung, Prozesse, Menschen und Management. Den zwischen den 4 Faktoren gibt es eine wechselseitige Wirkung.</subtitle><entry><title type="html">Gemeinsam gute OKR Sets erstellen</title><link href="/okr/2019/07/25/gemeinsam_gute_OKR_Sets_erstellen.html" rel="alternate" type="text/html" title="Gemeinsam gute OKR Sets erstellen" /><published>2019-07-25T13:48:04+02:00</published><updated>2019-07-25T13:48:04+02:00</updated><id>/okr/2019/07/25/gemeinsam_gute_OKR_Sets_erstellen</id><content type="html" xml:base="/okr/2019/07/25/gemeinsam_gute_OKR_Sets_erstellen.html">&lt;p&gt;&lt;strong&gt;Jeder der schonmal mit OKRs gearbeitet hat, weiss wie schwer es ist gute OKR Sets zu finden und dann auch formulieren.
+Gerade in Teams kann es ein sehr langer und nervenaufreibender Prozess sein. Nach mehreren Iterationen mit verschieden Teams
+habe ich folgende 4 Schritte als sehr sinnvoll kennengelernt.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;schritt-1-sicherstellen-das-jeder-weiss-was-okrs-sind&quot;&gt;&lt;strong&gt;Schritt 1:&lt;/strong&gt; Sicherstellen das jeder weiss was OKRs sind&lt;/h1&gt;
+
+&lt;p&gt;Das hört sich trivial an ist aber extrem wichtig und darf niemals als geben angesehen werden.&lt;/p&gt;
+
+&lt;p&gt;Wenn nicht alle, die an der Entstehung eines OKR Sets beteiligt sind, wissen was Objectives und Key Results sind 
+führt das zu langen nicht zielführenden Diskussionen. Wir dürfen dabei nicht vergessen das sich die meisten Mitglieder, 
+wenn nicht alle, des Teams nur alle paar Monate mit der Erstellung von OKR auseinandersetzen und damit das Wissen auch 
+immer wieder aufgefrischt werden sollte.&lt;/p&gt;
+
+&lt;p&gt;Nehmt euch Zeit im Team um diese theoretischen Grundlagen noch einmal durchzugehen bevor Ihr loslegt. 
+Wenn alle Personen grundsätzlich Wissen was OKRs sind reicht eine 10 minütige Rekapitulation.&lt;/p&gt;
+
+&lt;p&gt;Dieser Zeitaufwand wird sich im Laufe des Prozesses lohnen!!!!!!!&lt;/p&gt;
+
+&lt;p&gt;Hier noch einmal was ist ein Objective und Key Result:&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Objectives&lt;/em&gt;&lt;/strong&gt; definieren einen Zustand den ich in nach einer Iteration erreicht haben möchte.&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Key Results&lt;/em&gt;&lt;/strong&gt; definieren wie ich diesen Zustand erreichen möchte. (Erfolgstreiber)&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Murakamy hat dazu eine sehr nützliche Checkliste erstellt gegen die Ihr jedes Objective und Key Result testen könnt.
+( &lt;a href=&quot;http://murakamy.com/blog/checkliste-beispiele-okrs-objectives-key-results&quot; title=&quot;Checkliste&quot;&gt;Checkliste&lt;/a&gt;  )&lt;/p&gt;
+
+&lt;h1 id=&quot;schritt-2-was-möchten-wir-auf-das-nächste-level-bringen-objectives&quot;&gt;&lt;strong&gt;Schritt 2:&lt;/strong&gt; Was möchten wir auf das nächste Level bringen? (Objectives)&lt;/h1&gt;
+
+&lt;p&gt;Diese Fragestellung bedingt, dass wir als Team ein Gesamtbild der Aufgaben des Teams haben. Diese Gesamtbild der Tätigkeiten
+des Teams muss für alle transparent Vorliegen.&lt;/p&gt;
+
+&lt;p&gt;Um dieses Gesamtbild zu erstellen können wir sehr gut &lt;a href=&quot;https://www.liberatingstructures.de/ecocycle-planning/&quot;&gt;Ecocyle Planning&lt;/a&gt; eine &lt;a href=&quot;https://www.liberatingstructures.de&quot;&gt;Liberating Structures&lt;/a&gt; nutzen.
+Beim Ecocyle planning macht sich, das gesamte Team (erst einzeln, dann im Team) gedanken darüber 
+was die aktuellen Tätigkeiten(Aufgaben/Projekte/Services/…) sind. Gefolgt von einer Diskussion in welchem Zustand welches Projekt ist.&lt;/p&gt;
+
+&lt;p&gt;Zustände im Ecocycle sind: &lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Erneuereung&lt;/strong&gt; Produkte im Zustand Erneuerung sind Ideen die wir haben.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Geburt&lt;/strong&gt; Sind Produkte die wir angefangen haben aber noch nicht fertig sind.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Reifepase&lt;/strong&gt; Fertige Produkte die nur noch ein klein wenig angepasst werden müssen.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Kreative Zerstörung&lt;/strong&gt; In diesem Zustand wandern Produkt die wir abschalten möchten.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Das gibt dem gesamten Team einen Überblick welche Projekte gerade in welchem Zustand sind.
+Von diesem Bild können wir im zweiten Schritt gemeinsam ableiten welche Projekte vorangebracht werden sollen.&lt;/p&gt;
+
+&lt;p&gt;Im Falle des Ecoclyes kann voranbringen auch abschalten bedeuten, dies ist wichtig da wir durch die Ressourcen im Team begrenzt sind. 
+Wenn wir ein Produkt oder Service abschalten kann es mehr oder weniger erfolgreich gestaltet werden.
+So müssen wir  zum Beispiel zum erfolgreichen Abschalten eines Services allen Kunden kommunizieren und ggf. alternativen aufzeigen.&lt;/p&gt;
+
+&lt;p&gt;Diesen Ecocycle übung macht man 1-1,5 Std nicht länger.&lt;/p&gt;
+
+&lt;h1 id=&quot;schritt-3-was-bringt-mich-näher-an-den-zustand-key-results&quot;&gt;&lt;strong&gt;Schritt 3:&lt;/strong&gt; Was bringt mich näher an den Zustand? (Key Results)&lt;/h1&gt;
+
+&lt;p&gt;Nach dem das Team weiss welches Projekt sie in welchem Zustand bringen möchten, stellt sich die Frage: &lt;br /&gt;
+&lt;em&gt;“Wie möchten wir den Zustand erreichen, was würde uns zum Erfolg bringen”&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;1-brainstorming&quot;&gt;1. Brainstorming&lt;/h2&gt;
+&lt;p&gt;Als erster Schritt sollte jeder für sich Aufschreiben mit welchen Maßnahmen kann der Zustand eines Objectives erreicht werden.
+Hierbei ist alles erlaubt auch technische Aufgaben. In den weiteren Schritten werden wir von Ihnen abstrahieren um 
+saubere Key Result aufzustellen.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-clustern&quot;&gt;2. Clustern&lt;/h2&gt;
+&lt;p&gt;Nachdem alle Ideen zusammen getragen wurden fangen wir an die Ideen zu Clustern. 
+Die Anzahl der Cluster ist erstmal nachrangig es dürfen mehr als 5 sein, auch wenn wir am Ende nur 4-5 Treiber raussuchen müssen.
+Neben jedem Cluster schreibt man die Quintessenz dessen was drin steht. 
+Ein Vorteil ist bei der Clusterbildung das wir anhand ihrer sehr gut abstrahieren können.
+Ein oft anzutreffenden Fehler vor allem in technischen Teams ist, dass die Key Results gleich mit einer präzisen technischen Umsetzung 
+verbunden ist. Dies ist aber nicht notwendig und auch hinderlich, da wir uns selber den Planungsspielraum beschneiden.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Beispiel:&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Schlecht&lt;/strong&gt; &lt;br /&gt;
+Verschieben der Datei X in die Cloud um mehr Speicherplatz auf dem Handy zu haben.&lt;br /&gt;
+&lt;strong&gt;Besser&lt;/strong&gt; &lt;br /&gt;
+Reduktion des Speicherverbrauchs um 30%.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Im ersten Fall ist das Key Result sehr präzise und kann nur durch eine Handlung erfüllt werden.
+Beim zweiten Key Result können wir das Ergebnis auf verschiedene weisen erreichen und somit auf Änderungen reagieren.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-aus-jedem-cluster-ein-kr-ableiten&quot;&gt;3. Aus Jedem Cluster ein KR ableiten.&lt;/h2&gt;
+&lt;p&gt;Wenn wir wissen welche Cluster wir haben müssen wir die Cluster noch mit Zahlen versehen.
+Key Results müssen im Gegensatz zu Objectives meßbar sein.&lt;br /&gt;
+Hierbei sollten wir Moonshots verwenden, zu hoch gesetzte Ziele wirken aber demonitvierend.
+Das beduete wir brauchen ein gutes mittelmaß das Ziel sollte vordern aber nicht übervordern.
+Immer dann, wenn wir schon am Anfang wissen, dass das Ziel nicht erreichbar ist.&lt;/p&gt;
+
+&lt;p&gt;Nach mehreren Iterationen hat sich herausgestellt, dass der beste Ankerpunkt die Frage nach der perfekten Welt ist.&lt;/p&gt;
+
+&lt;p&gt;Also: “Wie viel würden wir schaffen, wenn alles perfekt läuft?” ( Keine Störungen, keine Krankheiten, keine unvorgesehenen Probleme,….)&lt;/p&gt;
+
+&lt;p&gt;Die Zahl die da raus kommt kann als 100% genommen werden, weil wir wissen dass die Welt nicht perfekt ist.&lt;/p&gt;
+
+&lt;h1 id=&quot;schritt-4-aus-formulieren-der-okr&quot;&gt;Schritt 4: Aus formulieren der OKR.&lt;/h1&gt;
+
+&lt;p&gt;Keep it simple and stupid. Versucht die OKR so einfach wie nur möglich zu schreiben. 
+ Je komplizierter sie sind desto mehr Interpretationsspielraum eröffnen die OKRs.
+ Wenn wir als Team gemeinsam an Zielen arbeiten wollen, müssen wir auch alle das gleiche Ziel vor Augen haben.
+ Dass dieses nicht der Fall ist merkt man spätestens bei den ersten Diskussionen über den aktuellen Stand.&lt;/p&gt;
+
+&lt;p&gt;Eine wichtige Erfahrung die ich gemacht habe, dass auch wenn man diese Schritte alle im Team zusammen durchlaufen trotzdem 
+ verschiedene Interpretationen der KR vorliegen können. Man kann aber aktive daran arbeiten, dass die nicht geschieht.
+ Ein Möglichkeit ist ähnlich dem Aktiven Zuhören kann man auch aktives Interpretieren betreiben. 
+ Lasst ein paar Mitglieder für alle wiedergeben was das Objective und KR bedeutet.
+ Mit diesem einfachen Trick kann man sofort merken, wenn es verschiedene Interpretationen gibt und die OKR ggf. präzieser schreiben.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mit diesen vier Schritten kann der Prozess der OKR Erstellung sehr viel leichter und kreibungloser laufen.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Jeder der schonmal mit OKRs gearbeitet hat, weiss wie schwer es ist gute OKR Sets zu finden und dann auch formulieren. Gerade in Teams kann es ein sehr langer und nervenaufreibender Prozess sein. Nach mehreren Iterationen mit verschieden Teams habe ich folgende 4 Schritte als sehr sinnvoll kennengelernt.</summary></entry><entry><title type="html">Spring Boot mit Kotlin Teil 1</title><link href="/development/spring/kotlin/2019/07/22/spring-boot-and-kotlin.html" rel="alternate" type="text/html" title="Spring Boot mit Kotlin Teil 1" /><published>2019-07-22T13:48:04+02:00</published><updated>2019-07-22T13:48:04+02:00</updated><id>/development/spring/kotlin/2019/07/22/spring-boot-and-kotlin</id><content type="html" xml:base="/development/spring/kotlin/2019/07/22/spring-boot-and-kotlin.html">&lt;p&gt;&lt;strong&gt;Dies ist der Start einer Blogserie, die sich mit den Unterschieden zwischen Java und Kotlin bei der Entwicklung 
 eines Spring Projektes auseinandersetzt. Ich werde aus der Perspektive eines Java Entwicklers aufzeigen, welche 
 unterschiede bestehen. Der Quellcode des Beispiel Projekts wird auf Github erscheinen jeder Teil der Blogserie wird 
 in einem Branch des Beispielprojektes hinterlegt sein.&lt;/strong&gt;&lt;/p&gt;
